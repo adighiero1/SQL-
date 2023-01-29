@@ -1,0 +1,51 @@
+SQL Exercise Answers:
+
+SELECT * FROM bestbuy.products;
+ 
+
+SELECT * FROM  bestbuy.products
+WHERE products.Price = 1400.00;
+ 
+
+SELECT * FROM bestbuy.products as p
+WHERE p.price = 11.99 OR p.price = 13.99;
+ 
+
+SELECT * FROM bestbuy.products as p
+WHERE NOT p.price = 11.99;
+ 
+
+SELECT * FROM bestbuy.products as p
+ORDER BY p.price DESC;
+ 
+
+SELECT * FROM bestbuy.employees
+WHERE MiddleInitial IS NULL;
+ 
+
+SELECT DISTINCT bestbuy.products.price
+FROM bestbuy.products;
+ 
+
+SELECT * FROM bestbuy.employees
+WHERE FirstName LIKE 'j%';
+ 
+
+SELECT * FROM bestbuy.products
+WHERE NAME = 'Macbook';
+ 
+
+SELECT * FROM bestbuy.products
+WHERE OnSale = 1;
+ 
+
+SELECT AVG(products.price) FROM bestbuy.products;
+
+
+SELECT * FROM bestbuy.employees AS e
+WHERE e.MiddleInitial IS NULL AND e.title = 'Geek Squad';
+ 
+
+SELECT * FROM bestbuy.products
+WHERE StockLevel BETWEEN 500 AND 1200
+ORDER BY Price;
